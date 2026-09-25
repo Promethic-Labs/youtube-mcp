@@ -1,0 +1,101 @@
+{
+  "manifest_version": "0.3",
+  "name": "youtube-mcp",
+  "display_name": "YouTube",
+  "version": "1.2.0",
+  "description": "Transcripts, search, video and channel stats, comments, playlists and trending videos from YouTube.",
+  "long_description": "Gives Claude access to YouTube.\n\n**Transcripts** work out of the box with no API key: pull the full transcript of any public video, with optional timestamps, time ranges and translation.\n\n**Search, stats, comments, playlists and trending** need a free YouTube Data API v3 key (Google Cloud Console > APIs & Services > enable YouTube Data API v3 > Credentials > Create API key). The free quota is 10,000 units a day; search uses 100 per call, everything else about 1.",
+  "author": {
+    "name": "Promethic Labs"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.mjs",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.mjs"
+      ],
+      "env": {
+        "YOUTUBE_API_KEY": "${user_config.youtube_api_key}"
+      }
+    }
+  },
+  "tools": [
+    {
+      "name": "get_transcript",
+      "description": "Full transcript of a video, optional timestamps, time range and translation"
+    },
+    {
+      "name": "list_transcripts",
+      "description": "Caption tracks available for a video"
+    },
+    {
+      "name": "search",
+      "description": "Search videos, channels or playlists"
+    },
+    {
+      "name": "get_videos",
+      "description": "Details and stats for up to 50 videos"
+    },
+    {
+      "name": "get_channel",
+      "description": "Channel info and stats by ID or @handle"
+    },
+    {
+      "name": "list_channel_videos",
+      "description": "A channel's latest uploads with stats"
+    },
+    {
+      "name": "get_comments",
+      "description": "Top comments on a video"
+    },
+    {
+      "name": "get_playlist",
+      "description": "Videos in a playlist"
+    },
+    {
+      "name": "trending",
+      "description": "Most popular videos by region and category"
+    }
+  ],
+  "keywords": [
+    "youtube",
+    "transcript",
+    "video",
+    "captions",
+    "youtube data api"
+  ],
+  "license": "MIT",
+  "user_config": {
+    "youtube_api_key": {
+      "type": "string",
+      "title": "YouTube Data API key (optional)",
+      "description": "Needed for search, stats, comments, playlists and trending. Transcripts work without it. Get one free in Google Cloud Console by enabling YouTube Data API v3.",
+      "sensitive": true,
+      "required": false
+    }
+  },
+  "compatibility": {
+    "claude_desktop": ">=0.10.0",
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=18.0.0"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Promethic-Labs/youtube-mcp.git"
+  },
+  "homepage": "https://github.com/Promethic-Labs/youtube-mcp",
+  "support": "https://github.com/Promethic-Labs/youtube-mcp/issues",
+  "privacy_policies": [
+    "https://github.com/Promethic-Labs/youtube-mcp/blob/main/PRIVACY.md"
+  ],
+  "documentation": "https://github.com/Promethic-Labs/youtube-mcp#readme"
+}
