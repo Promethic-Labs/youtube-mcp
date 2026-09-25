@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.2
+
+- `manifest.json` author now links to the Promethic Labs GitHub profile.
+
 ## 1.2.1
 
 - New extension icon. The previous icon resembled the YouTube logo; the new one is an original play-and-captions mark.
