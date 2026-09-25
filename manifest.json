@@ -2,7 +2,7 @@
   "manifest_version": "0.3",
   "name": "youtube-mcp",
   "display_name": "YouTube",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Transcripts, search, video and channel stats, comments, playlists and trending videos from YouTube.",
   "long_description": "Gives Claude access to YouTube.\n\n**Transcripts** work out of the box with no API key: pull the full transcript of any public video, with optional timestamps, time ranges and translation.\n\n**Search, stats, comments, playlists and trending** need a free YouTube Data API v3 key (Google Cloud Console > APIs & Services > enable YouTube Data API v3 > Credentials > Create API key). The free quota is 10,000 units a day; search uses 100 per call, everything else about 1.",
   "author": {

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.1
+
+- New extension icon. The previous icon resembled the YouTube logo; the new one is an original play-and-captions mark.
+
 ## 1.2.0
 
 - Every tool now has a title and read-only annotations, so Claude can run them without asking for confirmation on each call.
