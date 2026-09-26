@@ -157,6 +157,10 @@ Issues and pull requests are welcome. For anything larger than a bug fix, please
 
 Not affiliated with, endorsed by, or sponsored by YouTube or Google. YouTube is a trademark of Google LLC. You are responsible for using this tool in line with the [YouTube Terms of Service](https://www.youtube.com/t/terms) and the [YouTube API Services Terms](https://developers.google.com/youtube/terms/api-services-terms-of-service).
 
+## About
+
+Built and maintained by [Promethic Labs](https://www.promethic.xyz/products/youtube-mcp), an AI research lab in Sydney. More of our tools and research at [promethic.xyz](https://www.promethic.xyz).
+
 ## License
 
-[MIT](LICENSE) © Promethic Labs Pty Ltd
+[MIT](LICENSE) © [Promethic Labs Pty Ltd](https://www.promethic.xyz)
